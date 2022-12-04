@@ -1,16 +1,18 @@
-# hola_mundo_flutter
+# Calculadora para problemas electricos y electronicos
 
-A new Flutter project.
+El objetivo de este proyecto es poder brindar una aplicacion open source de calculos como ensenanza de temas relacionados hacia el mundo de la electronica, la aplicacion se esta desarrollando con Dart en Flutter.
 
-## Getting Started
+Esta aplicacion sera lanzada en la Play Store y App Store el 01/02/2023.
 
-This project is a starting point for a Flutter application.
+## Estas comenzando?
 
-A few resources to get you started if this is your first Flutter project:
+Este proyecto es un punto de partida para un aplicativo Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Algunos recursos que puedes utilizar para iniciarte en tus primeros proyectos de Flutter son los siguientes:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Laboratorio: Escribe tu primera aplicacion con Flutter](https://docs.flutter.dev/get-started/codelab)
+- [Resetas: Ejemplos funcionales de codigos Flutter](https://docs.flutter.dev/cookbook)
+
+para mas ayuda iniciando en el mundo del desarrollo con Flutter, visita la
+[documentacion online](https://docs.flutter.dev/), la cual ofrece tutoriales,
+ejemplos, mentoria en el desarrollo de aplicaciones, y referencias API completas.
