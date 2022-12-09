@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hola_mundo_flutter/naviBar/botton_nav.dart';
 import 'package:hola_mundo_flutter/screen/routes.dart';
 import 'package:flutter/services.dart';
+import 'package:hola_mundo_flutter/theme/themeChange.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +13,22 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return ChangeNotifierProvider(
+      create: (_) => ThemeChanger(ThemeData.dark()),
+      child: MaterialAppWithTheme(),
+    );
+  }
+}
+
+class MaterialAppWithTheme extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeChanger>(context);
+
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      theme: theme.getTheme(),
       home: HomePage(),
     );
   }

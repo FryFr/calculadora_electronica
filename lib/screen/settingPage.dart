@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hola_mundo_flutter/theme/themeChange.dart';
+import 'package:provider/provider.dart';
 
 class settingPage extends StatefulWidget {
   const settingPage({Key? key}) : super(key: key);
@@ -8,6 +10,8 @@ class settingPage extends StatefulWidget {
 
 class settings extends State<settingPage> {
   bool switchCurrenValue = false;
+
+ //theme.setTheme(ThemeData.dark());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +38,6 @@ class settings extends State<settingPage> {
           children: const <Widget>[
             Text('Ajustes', style: TextStyle(
                 fontSize: 30,
-                color: Colors.black87
             )
             ),
           ],
@@ -43,20 +46,26 @@ class settings extends State<settingPage> {
     );
   }
   Widget _darkModeBottom(){
+
+    final theme = Provider.of<ThemeChanger>(context);
     return Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 10,
           horizontal: 20
         ),
-
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Icon(Icons.dark_mode),
             Text('Cambiar a modo oscuro'),
-            Switch(
+            Switch.adaptive(
               value: switchCurrenValue,
               onChanged: (bool valueIn){
+                if (switchCurrenValue == true){
+                  theme.setTheme(ThemeData.light());
+                }else{
+                  theme.setTheme(ThemeData.dark());
+                }
                 setState(() {
                   switchCurrenValue = valueIn;
                 });
